@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quotes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="welcome" style="font-size:40px;">Welcome to Quotes Website</div>
+        <div id="quotes" class="one">
+        </div>
+        <div id="author" class="one">
+        </div>
+        <button id="newquote" onclick="getNewQuotes()" class="one">
+            New Quotes
+        </button>
+        <button id="tweetme" onclick="tweet()" class="one">Tweet on twitter</button>
+    </div>
+</body>
+<script src="data.js"></script>
+<script>
+    const tweet = () => {
+        const link = `https://twitter.com/intent/tweet?text=${data.text}`;
+        window.open(link);
+    }
+</script>
+
+</html>
